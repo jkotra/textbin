@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost:3306/TextBin"
+    username: "root"
+    password: "password"
+  
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+grc:
+  secret: "YOUR_KEY"
