@@ -35,6 +35,10 @@ public class VerifyCaptcha {
 		request.put("response", response);
 		
 		log.info("secret: {}", this.GRCSecret);
+
+		if (this.GRCSecret.equals("YOUR_KEY")) {
+			return true; //default
+		}
 		
 		GRCResponse grcresponse = this.rt.postForObject(
 				"https://www.google.com/recaptcha/api/siteverify?secret={secret}&response={response}",
