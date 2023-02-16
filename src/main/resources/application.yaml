@@ -3,6 +3,12 @@ spring:
     url: "jdbc:mysql://localhost:3306/TextBin"
     username: "root"
     password: "password"
+  graphql:
+    path: "/api/graphql"
+    cors:
+      allowed-origins:
+        - "*"
+
   
   jpa:
     generate-ddl: true
@@ -11,9 +17,15 @@ spring:
     show-sql: true
 
 server:
+  port: 8000
   error:
     whitelabel:
       enabled: false
 
 grc:
   secret: "YOUR_KEY"
+
+redis:
+  timeout:
+    latest: 120
+    paste: 240

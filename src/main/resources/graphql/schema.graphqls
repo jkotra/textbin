@@ -1,0 +1,11 @@
+type Paste {
+    id: ID,
+    date: Int,
+    uuid: String,
+    title: String,
+    text: String
+}
+
+type Query {
+    getLatestPastes: [Paste]
+}
